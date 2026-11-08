@@ -24,6 +24,10 @@ const int& Matrix::operator()(std::size_t row,std::size_t col) const{
 	return data_[row*cols+col];
 }
 
+Matrix::Matrix(const Matrix& other)
+    : rows(other.rows), cols(other.cols), data_(other.data_) {
+}
+
 std::ostream& operator<<(std::ostream& os, const Matrix& A) {
     for (std::size_t row = 0; row < A.getRows(); ++row) {
         for (std::size_t col = 0; col < A.getCols(); ++col) {
