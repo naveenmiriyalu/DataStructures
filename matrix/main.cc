@@ -15,4 +15,5 @@ int main() {
     const Matrix& B = A;
 
     std::cout << B(1, 2) << "\n";
+    std::cout << B << "\n";
 }
