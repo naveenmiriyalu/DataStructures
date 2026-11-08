@@ -3,6 +3,7 @@
 
 #include <vector>
 #include <cstddef>
+#include <iosfwd>
 
 class Matrix{
 
@@ -19,4 +20,6 @@ class Matrix{
 	int& operator()(std::size_t row,std::size_t col);
 	const int& operator()(std::size_t row,std::size_t col) const;
 };
+
+std::ostream& operator<<(std::ostream& os, const Matrix& A);
 #endif
