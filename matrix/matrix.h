@@ -15,6 +15,7 @@ class Matrix{
  public:
  	Matrix();
  	Matrix(std::size_t rows,std::size_t cols);
+	Matrix(const Matrix& other);
 	std::size_t getRows() const;
 	std::size_t getCols() const;
 	int& operator()(std::size_t row,std::size_t col);
